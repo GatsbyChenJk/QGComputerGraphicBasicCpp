@@ -3,7 +3,7 @@
 
 //可以考虑让这个类的使用更优雅一点
 //不想折腾的删除这个定义
-#define FLL_ITERATOR_FEATURE ///可选	[迭代器]
+//#define FLL_ITERATOR_FEATURE ///可选	[迭代器]
 
 #ifdef FLL_ITERATOR_FEATURE
 //这个特性要求在插入和移除时 "在形式上" 无需前一个节点，只使用当前节点即可
@@ -14,6 +14,7 @@
 
 
 template<class T>
+
 class ForwardLinkedList
 {
 	//...
