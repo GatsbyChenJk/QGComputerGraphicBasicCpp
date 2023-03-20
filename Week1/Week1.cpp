@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-	cout << "LinkedList test" << endl;
+	cout << "LinkedList test" << endl;//测试单向链表adt功能
 	LinkedList<int> testList;
 	testList.PushFront(new Node<int>(123));
 	testList.PushFront(new Node<int>(456));
@@ -23,7 +23,7 @@ int main()
 
 	cout << endl;
 
-	cout << "ForwardLinkedList test" << endl;
+	cout << "ForwardLinkedList test" << endl;//测试双向链表adt功能
 	ForwardLinkedList<int> list;
 	list.PushFront(new FNode<int>(123));
 	list.PushFront(new FNode<int>(456));
