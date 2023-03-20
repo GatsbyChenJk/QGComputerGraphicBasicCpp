@@ -33,9 +33,11 @@ template<class T>
 class LinkedList
 {
 private:
+
 	Node<T>* head;
+
 	int size = 0;
-	//...
+
 public:
 #ifdef LL_ITERATOR_FEATURE
 	class iterator
