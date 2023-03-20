@@ -1,6 +1,7 @@
 #pragma once
 #include <iterator>
-
+#include <iostream>
+using namespace std;
 //可以考虑让这个类的使用更优雅一点
 //不想折腾的删除这个定义
 //#define FLL_ITERATOR_FEATURE ///可选	[迭代器]
@@ -12,28 +13,25 @@
 #endif
 template<class T>
 
-class Node//双向链表结点类
+class FNode//双向链表结点类
 {
 public:
+	FNode<T>* prev;//前指针
 	T data;
-	Node* fwd;//前指针
-	Node* next;//后指针
-	Node();
-	Node(T data);
+	FNode<T>* next;//后指针
+	FNode();
+	FNode(T data);
 };
 
 template<class T>
 
-Node<T>::Node(){}; //无参数构造函数
+FNode<T>::FNode(){}; //无参数构造函数
 
 template<class T>
 
-Node<T>::Node(T data)
-	:fwd(NULL),next(NULL)
+FNode<T>::FNode(T data)
 {
-
 		this->data = data;//有参数构造函数
-
 }
 
 template<class T>
@@ -44,7 +42,7 @@ private:
 
 	int size = 0;
 
-	Node<T>* head;
+	FNode<T>* Head;
 
 public:
 #ifdef FLL_ITERATOR_FEATURE
@@ -106,17 +104,21 @@ public:
 
 	bool Empty();
 
-	void PushFront(Node<T>* node);
+	void PushFront(FNode<T>* node);
 
-	void PushBack(Node<T>* node);
+	void PushBack(FNode<T>* node);
 
-	void Insert();
+	void Insert(int pos,int InsertData);
 
-	void Erase();
+	void Erase(int pos);
 
 	void Clear();
 
 	void Reverse();
+
+	void Print();
+
+	void ReversePrint();
 
 	//... other methods
 };
@@ -125,7 +127,9 @@ template<class T>
 
 ForwardLinkedList<T>::ForwardLinkedList()
 {
-	head = new Node<T>();
+	Head = new FNode<T>();
+	Head->prev = NULL;
+	Head->next = NULL;
 }
 
 
@@ -133,16 +137,16 @@ template<class T>
 
 ForwardLinkedList<T>::~ForwardLinkedList()
 {
-	Node<T>* tempNode = head->next;
+	FNode<T>* tempNode = Head->next;
 
 	if (tempNode != NULL)
 	{
-		Node<T>* deleteNode = tempNode;
+		FNode<T>* deleteNode = tempNode;
 		tempNode = tempNode->next;
 		delete deleteNode;
 	}
 		
-	delete head;
+	delete Head;
 
 }
 
@@ -162,14 +166,138 @@ size_t ForwardLinkedList<T>::Count()//获取链表长度
 
 template<class T>
 
-void ForwardLinkedList<T>::PushFront(Node<T>* node)
+void ForwardLinkedList<T>::PushFront(FNode<T>* node)//双向链表头插
 {
+	node->next = Head->next;
+	Head->next = node;
+	node->prev = Head;
+	size++;
+}
+
+template<class T>
+
+void ForwardLinkedList<T>::PushBack(FNode<T>* node)//双向链表尾插
+{
+	FNode<T> *tempNode = Head;
+
+	while (tempNode->next != NULL)
+	{
+		tempNode = tempNode->next;//获取链表尾结点指针
+	}
+	
+	tempNode->next = node;//将原来的尾结点的尾指针指向node结点
+	node->prev = tempNode;//将node结点指针指向原来的尾结点
+	size++;
 
 }
 
 template<class T>
 
-void ForwardLinkedList<T>::PushBack(Node<T>* node)
+void ForwardLinkedList<T>::Print()
 {
+	FNode<T>* tempNode = Head;
+
+	cout << "the data in list:" << endl;
+
+	for (int i = 0;i < size;i++)
+	{
+
+		cout << tempNode->next->data << endl;
+		tempNode = tempNode->next;
+
+		if (tempNode->next == NULL)
+		{
+			return;
+		}
+	}
+
+}
+
+template<class T>
+
+void ForwardLinkedList<T>::ReversePrint()
+{
+	FNode<T>* tempNode = Head;
+
+	for(int i=0;i<size;i++)
+	{
+		tempNode = tempNode->next;
+	}
+
+	cout << "the reverse sequence of the list are:" << endl;
+
+	for (int i = 0;i < size;i++)
+	{
+		cout << tempNode->data << endl;
+
+		tempNode = tempNode->prev;
+	    
+		if (i == 0)
+		{
+			cout << Head->data << endl;
+		}
+	}
+
+}
+
+template<class T>
+
+void ForwardLinkedList<T>::Insert(int pos, int InsertData)
+{
+	
+		FNode<T>* tempNode;
+
+		cout << "insert position: " << pos << " insert data: " << InsertData << endl;
+
+		if (pos<0 || (pos + 1)>size)
+		{
+			cout << "error" << endl;
+
+			return;
+		}
+
+		FNode<T>* InsertNode = new FNode<T>(InsertData);
+		FNode<T>* FindPosNode = Head;
+
+		for (int i = 0;i < pos - 1;i++)
+		{
+			FindPosNode = FindPosNode->next;//将指针移动到要插入的位置
+		}
+
+		tempNode = FindPosNode->next;
+		FindPosNode->next = InsertNode;//将要插入结点的前一个结点的指针指向要插入的结点
+		InsertNode->next = tempNode;//将插入的结点的指针指向原位置的下一个结点
+
+		size++;
+	
+}
+
+template<class T>
+
+void ForwardLinkedList<T>::Erase(int pos)
+{
+	FNode<T>* EraseNode = Head;
+
+	FNode<T>* tempNode;
+
+	cout << "delete data position: " << pos << endl;
+
+	if (pos == 1)
+	{
+		Head = Head->next;
+		free(EraseNode);
+		return;
+	}
+
+	for (int i = 0;i < pos - 1;i++)
+	{
+		EraseNode = EraseNode->next;//获取要删除位置的前一个位置的指针
+	}
+
+	tempNode = EraseNode->next;//获取要删除的结点的指针
+	EraseNode->next = tempNode->next;//将要删除的结点的前一个位置的指针指向被删除结点的下一结点
+	free(tempNode);
+
+	size--;
 
 }

@@ -80,7 +80,7 @@ public:
 #else
 	//default insert after node
 	//void Insert(const T& val, T* node, bool insert_prev = false);
-	void Erase();
+	void Erase(int pos);
 #endif
 
 	T& Front();
@@ -100,7 +100,7 @@ public:
 
 	void Print();
 
-	void Insert();
+	void Insert(int pos,int InsertData);
 	
 	void Clear();
 
@@ -177,7 +177,7 @@ void LinkedList<T>::Print()//顺序输出链表所有元素
 		cout << tempNode->next->data << endl;
 		tempNode = tempNode->next;
 
-		if (tempNode->next == nullptr)
+		if (tempNode->next == NULL)
 		{
 			return;
 		}
@@ -195,14 +195,15 @@ size_t LinkedList<T>::Count() //获取链表结点数（长度）
 
 template<class T>
 
-void LinkedList<T>::Insert()
+void LinkedList<T>::Insert(int pos,int InsertData)//在指定位置pos插入结点数据InsertData
 {
-	int pos,InsertData;
-
+	
 	Node<T>* tempNode;
 
-	cout << "enter the position you want to insert" << endl;
-	cin >> pos;
+	//cout << "enter the position you want to insert" << endl;
+	//cin >> pos;
+
+	cout << "insert position: " << pos << " insert data: " << InsertData << endl;
 
 	if (pos<0 || (pos + 1)>size) 
 	{ 
@@ -211,8 +212,8 @@ void LinkedList<T>::Insert()
 		return;
 	}
 
-	cout << "enter the data" << endl;
-	cin >> InsertData;
+	//cout << "enter the data" << endl;
+	//cin >> InsertData;
 
 	Node<T>* InsertNode = new Node<T>(InsertData);
 	Node<T>* FindPosNode = head;
@@ -230,16 +231,17 @@ void LinkedList<T>::Insert()
 
 template<class T>
 
-void LinkedList<T>::Erase()//删除指定位置的结点
+void LinkedList<T>::Erase(int pos)//删除指定位置pos的结点
 {
-	int pos;
 
 	Node<T>* EraseNode=head;
 
 	Node<T>* tempNode;
 
-	cout << "please enter the position of the node you want to erase" << endl;
-	cin >> pos;
+	//cout << "please enter the position of the node you want to erase" << endl;
+	//cin >> pos;
+
+	cout << "delete data position: " << pos << endl;
 
 	if (pos == 1)
 	{
