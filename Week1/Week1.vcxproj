@@ -131,7 +131,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Week1forFL.cpp" />
     <ClCompile Include="Week1.cpp" />
   </ItemGroup>
   <ItemGroup>

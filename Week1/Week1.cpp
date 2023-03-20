@@ -2,7 +2,7 @@
 #include "ForwardLinkedList.h"
 #include <iostream>
 using namespace std;
-
+//QG工作室训练营第一周大组作业
 int main()
 {
 	cout << "LinkedList test" << endl;//测试单向链表adt功能
