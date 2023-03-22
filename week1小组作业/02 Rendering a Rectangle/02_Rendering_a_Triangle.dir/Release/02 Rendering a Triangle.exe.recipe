@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>C:\Users\25768\Desktop\作业\训练营作业\小组\build\x64\Release\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\25768\Desktop\作业\训练营作业\小组\build\02 Rendering a Triangle\02 Rendering a Triangle.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>C:\Users\25768\Desktop\作业\训练营作业\小组\build\02 Rendering a Triangle\HLSL\Triangle_PS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\25768\Desktop\作业\训练营作业\小组\build\02 Rendering a Triangle\HLSL\Triangle_VS.cso</FullPath>
+    </ContentFile>
+  </ContentFiles>
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>
