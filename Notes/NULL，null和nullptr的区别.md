@@ -20,11 +20,32 @@
 
 #endif 
 
-在用下图所示main函数里的代码调用func函数时，NULL会以常数0传入参数而不是空指针。
+在用下面所示main函数里的代码调用func函数时，NULL会以常数0传入参数而不是空指针。
 
-![](C:\Users\25768\Desktop\作业\训练营作业\笔记\笔记示例代码01.jpg)
-
-所以在C++中用NULL定义空指针会带来问题
+#include <iostream>
+  
+void func(void* i)
+{
+  std::cout<<"fun1"<<endl;
+}
+  
+void func(int i)
+{
+  std::cout<<"fun2"<<endl;
+}  
+  
+void main(int argc,char* argv[])
+{
+  func(NULL);
+  func(nullptr);
+  getchar(); 
+}
+  
+输出的结果为
+func2
+func1
+  
+可见在C++中用NULL定义空指针会带来问题
 
 ## 2.null
 
