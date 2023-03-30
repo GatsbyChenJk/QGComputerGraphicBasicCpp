@@ -1,0 +1,11 @@
+# windowsAPI中消息事件WM_MOUSEWHEEL 和WM_MOUSEHWHEEL的区别
+
+WM_MOUSEWHEEL和WM_MOUSEHWHEEL是Windows API中处理鼠标滚轮事件的消息之一。
+
+WM_MOUSEWHEEL是用于处理标准鼠标滚轮的消息。当用户滚动鼠标滚轮时，Windows会发送WM_MOUSEWHEEL消息，它包含了滚轮的移动量，可以用于控制滚动条、缩放等操作。
+
+WM_MOUSEHWHEEL是用于处理具有水平滚轮的鼠标的消息。一些鼠标具有水平滚轮，这些水平滚轮可以左右滚动而不是上下滚动。当用户使用这些水平滚轮时，Windows会发送WM_MOUSEHWHEEL消息，它包含了水平滚轮的移动量，可以用于控制横向滚动条、旋转等操作。
+
+因此，WM_MOUSEWHEEL和WM_MOUSEHWHEEL的区别在于它们处理的滚轮类型不同：WM_MOUSEWHEEL用于处理标准鼠标滚轮，而WM_MOUSEHWHEEL用于处理具有水平滚轮的鼠标。
+
+PS：才知道原来还有水平滚轮的鼠标
