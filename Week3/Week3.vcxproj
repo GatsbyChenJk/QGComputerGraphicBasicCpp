@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{97b84f7d-5038-4bd9-87a3-2f7952fb73c2}</ProjectGuid>
-    <RootNamespace>Week2</RootNamespace>
+    <ProjectGuid>{2f83d963-7920-494a-82ae-ebcc1b19dd71}</ProjectGuid>
+    <RootNamespace>Week3</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -129,13 +129,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Week2\QGStdioComputerBasic02\QGStdioComputerBasic02\LinkedStack.h" />
-    <ClInclude Include="..\..\..\..\Week2\QGStdioComputerBasic02\QGStdioComputerBasic02\Queue.h" />
+    <ClInclude Include="Sort.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Week2\QGStdioComputerBasic02\QGStdioComputerBasic02\LinkedStack.cpp" />
-    <ClCompile Include="..\..\..\..\Week2\QGStdioComputerBasic02\QGStdioComputerBasic02\Queue.cpp" />
-    <ClCompile Include="..\..\..\..\Week2\QGStdioComputerBasic02\QGStdioComputerBasic02\Week2.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Sort.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
