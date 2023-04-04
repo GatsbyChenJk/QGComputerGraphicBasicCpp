@@ -4,7 +4,7 @@
 class StackNode//链栈结点类
 {
 public:
-	int data;
+	int data; 
 	StackNode* next;
 	StackNode();
 	StackNode(int data);

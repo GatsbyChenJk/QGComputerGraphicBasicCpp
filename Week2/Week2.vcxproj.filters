@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Week2\QGStdioComputerBasic02\QGStdioComputerBasic02\LinkedStack.h">
+    <ClInclude Include="Queue.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Week2\QGStdioComputerBasic02\QGStdioComputerBasic02\Queue.h">
+    <ClInclude Include="LinkedStack.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

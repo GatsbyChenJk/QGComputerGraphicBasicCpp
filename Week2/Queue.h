@@ -1,8 +1,8 @@
-#pragma once
+ï»¿#pragma once
 #include <iostream>
-//ÕâÀïÎÒÑ¡ÔñÓÃÁ´±íÀ´ÊµÏÖÒ»¸öË³Ğò¶ÓÁĞ
+//è¿™é‡Œæˆ‘é€‰æ‹©ç”¨é“¾è¡¨æ¥å®ç°ä¸€ä¸ªé¡ºåºé˜Ÿåˆ—
 
-class QueueNode
+class QueueNode 
 {
 public:
 	int data;
@@ -15,24 +15,24 @@ class ListQueue
 {
 private:
 	int size = 0;
-	QueueNode* head;//¶ÓÍ·Ö¸Õë
-	QueueNode* tail;//¶ÓÎ²Ö¸Õë
+	QueueNode* head;//é˜Ÿå¤´æŒ‡é’ˆ
+	QueueNode* tail;//é˜Ÿå°¾æŒ‡é’ˆ
 public:
 	ListQueue();
 
 	~ListQueue();
 
-	void Push(QueueNode* PushNode);//Èë¶Ó²Ù×÷
+	void Push(QueueNode* PushNode);//å…¥é˜Ÿæ“ä½œ
 
-	void Pop();//³ö¶Ó²Ù×÷
+	void Pop();//å‡ºé˜Ÿæ“ä½œ
 
-	bool IsEmpty();//ÅĞ¶Ï¶ÓÁĞÊÇ·ñÎª¿Õ
+	bool IsEmpty();//åˆ¤æ–­é˜Ÿåˆ—æ˜¯å¦ä¸ºç©º
 
-	int GetSize();//»ñÈ¡¶ÓÁĞ³¤¶È
+	int GetSize();//è·å–é˜Ÿåˆ—é•¿åº¦
 
-	int GetFirst();//»ñÈ¡¶ÓÁĞÊ×ÔªËØ
+	int GetFirst();//è·å–é˜Ÿåˆ—é¦–å…ƒç´ 
 
-	int GetLast();//»ñÈ¡¶ÓÁĞÄ©Î²ÔªËØ
+	int GetLast();//è·å–é˜Ÿåˆ—æœ«å°¾å…ƒç´ 
     
-	void Print();//Êä³ö¶ÓÁĞÔªËØ
+	void Print();//è¾“å‡ºé˜Ÿåˆ—å…ƒç´ 
 };

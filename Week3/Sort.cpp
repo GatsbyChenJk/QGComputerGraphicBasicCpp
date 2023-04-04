@@ -1,4 +1,4 @@
-#include "Sort.h"
+ï»¿#include "Sort.h"
 #include <iostream>
 
 void insertSort(int* a, int n)
@@ -7,19 +7,19 @@ void insertSort(int* a, int n)
 
 	for (int i = 1;i < n;i++)
 	{
-		tempNum = a[i];//Òª²åÈëµÄÔªËØ
+		tempNum = a[i];//è¦æ’å…¥çš„å…ƒç´ 
 		for (int j = i - 1;j < i;j--)
 		{
 			if (tempNum < a[j])
 			{
-				a[j + 1] = a[j];//Âú×ãÌõ¼şjÎ»ÖÃµÄÊıºóÒÆÒ»Î»
-				a[j] = tempNum;//½«jÎ»ÖÃÔªËØ¸³ÖµÎªtempNum
+				a[j + 1] = a[j];//æ»¡è¶³æ¡ä»¶jä½ç½®çš„æ•°åç§»ä¸€ä½
+				a[j] = tempNum;//å°†jä½ç½®å…ƒç´ èµ‹å€¼ä¸ºtempNum
 			}
 		}
 	}
 }
 
-void MergeArray(int* a, int begin, int mid, int end, int* temp)//ºÏ²¢
+void MergeArray(int* a, int begin, int mid, int end, int* temp)//åˆå¹¶
 {
 
 }
@@ -28,9 +28,9 @@ void MergeSort(int* a, int begin, int end, int* temp)
 {
 	if (end > begin)
 	{
-		int len = end - begin;//»ñÈ¡³¤¶È
-		int mid = len / 2;//»ñÈ¡ÖĞ¼äÎ»ÖÃË÷Òı
-		temp = a;//temp²»ÖªµÀ¸³ÖµÎªÊ²Ã´£¬ÔİÊ±ÕâÑù´¦Àí
+		int len = end - begin;//è·å–é•¿åº¦
+		int mid = len / 2;//è·å–ä¸­é—´ä½ç½®ç´¢å¼•
+		temp = a;//tempä¸çŸ¥é“èµ‹å€¼ä¸ºä»€ä¹ˆï¼Œæš‚æ—¶è¿™æ ·å¤„ç†
 		MergeSort(a, begin, mid, temp);
 		MergeSort(a, mid + 1, end,temp);
 	}

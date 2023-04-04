@@ -105,6 +105,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\Users\25768\Desktop\作业\训练营作业\大组\Week2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -120,6 +121,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\Users\25768\Desktop\作业\训练营作业\大组\Week2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,8 +131,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Week2\QGStdioComputerBasic02\QGStdioComputerBasic02\LinkedStack.h" />
-    <ClInclude Include="..\..\..\..\Week2\QGStdioComputerBasic02\QGStdioComputerBasic02\Queue.h" />
+    <ClInclude Include="LinkedStack.h" />
+    <ClInclude Include="Queue.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Week2\QGStdioComputerBasic02\QGStdioComputerBasic02\LinkedStack.cpp" />

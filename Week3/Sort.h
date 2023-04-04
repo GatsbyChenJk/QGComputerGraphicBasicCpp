@@ -1,75 +1,75 @@
-#pragma once
+ï»¿#pragma once
 
 #ifndef SORT_H_INCLUDED
 #define SORT_H_INCLUDED
 
 /**
  *  @name        : void insertSort(int *a,int n);
- *  @description : ²åÈëÅÅĞòËã·¨
- *  @param       : Êı×éÖ¸Õë a, Êı×é³¤¶È n
+ *  @description : æ’å…¥æ’åºç®—æ³•
+ *  @param       : æ•°ç»„æŒ‡é’ˆ a, æ•°ç»„é•¿åº¦ n
  */
 void insertSort(int* a, int n);
 
 /**
  *  @name        : void MergeArray(int *a,int begin,int mid,int end,int *temp);
- *  @description : ¹é²¢ÅÅĞò£¨ºÏ²¢Êı×é£©
- *  @param       : Êı×éÖ¸Õëa£¬Êı×éÆğµãbegin£¬Êı×éÖĞµãmid£¬Êı×éÖÕµãend£¬³ĞÔØÊı×éÖ¸Õëtemp
+ *  @description : å½’å¹¶æ’åºï¼ˆåˆå¹¶æ•°ç»„ï¼‰
+ *  @param       : æ•°ç»„æŒ‡é’ˆaï¼Œæ•°ç»„èµ·ç‚¹beginï¼Œæ•°ç»„ä¸­ç‚¹midï¼Œæ•°ç»„ç»ˆç‚¹endï¼Œæ‰¿è½½æ•°ç»„æŒ‡é’ˆtemp
  */
 void MergeArray(int* a, int begin, int mid, int end, int* temp);
 
 /**
  *  @name        : void MergeSort(int *a,int begin,int end,int *temp);
- *  @description : ¹é²¢ÅÅĞò
- *  @param       : Êı×éÖ¸Õëa£¬Êı×éÆğµãbegin£¬Êı×éÖÕµãend£¬³ĞÔØÊı×éÖ¸Õëtemp
+ *  @description : å½’å¹¶æ’åº
+ *  @param       : æ•°ç»„æŒ‡é’ˆaï¼Œæ•°ç»„èµ·ç‚¹beginï¼Œæ•°ç»„ç»ˆç‚¹endï¼Œæ‰¿è½½æ•°ç»„æŒ‡é’ˆtemp
  */
 void MergeSort(int* a, int begin, int end, int* temp);
 
 /**
  *  @name        : void QuickSort(int *a, int begin, int end);
- *  @description : ¿ìËÙÅÅĞò£¨µİ¹é°æ£©
- *  @param       : Êı×éÖ¸Õëa£¬Êı×éÆğµãbegin£¬Êı×éÖÕµãend
+ *  @description : å¿«é€Ÿæ’åºï¼ˆé€’å½’ç‰ˆï¼‰
+ *  @param       : æ•°ç»„æŒ‡é’ˆaï¼Œæ•°ç»„èµ·ç‚¹beginï¼Œæ•°ç»„ç»ˆç‚¹end
  */
 void QuickSort_Recursion(int* a, int begin, int end);
 
 /**
  *  @name        : void QuickSort(int *a,int size)
- *  @description : ¿ìËÙÅÅĞò£¨·Çµİ¹é°æ£©
- *  @param       : Êı×éÖ¸Õëa£¬Êı×é³¤¶Èsize
+ *  @description : å¿«é€Ÿæ’åºï¼ˆéé€’å½’ç‰ˆï¼‰
+ *  @param       : æ•°ç»„æŒ‡é’ˆaï¼Œæ•°ç»„é•¿åº¦size
  */
 void QuickSort(int* a, int size);
 
 /**
  *  @name        : void QuickSort(int *a, int begin, int end)
- *  @description : ¿ìËÙÅÅĞò£¨ÊàÖá´æ·Å£©
- *  @param       : Êı×éÖ¸Õëa£¬Êı×éÆğµãbegin£¬Êı×éÖÕµãend
+ *  @description : å¿«é€Ÿæ’åºï¼ˆæ¢è½´å­˜æ”¾ï¼‰
+ *  @param       : æ•°ç»„æŒ‡é’ˆaï¼Œæ•°ç»„èµ·ç‚¹beginï¼Œæ•°ç»„ç»ˆç‚¹end
  */
 int Partition(int* a, int begin, int end);
 
 /**
  *  @name        : void CountSort(int *a, int size , int max)
- *  @description : ¼ÆÊıÅÅĞò
- *  @param       : Êı×éÖ¸Õëa£¬Êı×é³¤¶Èsize£¬Êı×é×î´óÖµmax
+ *  @description : è®¡æ•°æ’åº
+ *  @param       : æ•°ç»„æŒ‡é’ˆaï¼Œæ•°ç»„é•¿åº¦sizeï¼Œæ•°ç»„æœ€å¤§å€¼max
  */
 void CountSort(int* a, int size, int max);
 
 /**
  *  @name        : void RadixCountSort(int *a,int size)
- *  @description : »ùÊı¼ÆÊıÅÅĞò
- *  @param       : Êı×éÖ¸Õëa£¬Êı×é³¤¶Èsize
+ *  @description : åŸºæ•°è®¡æ•°æ’åº
+ *  @param       : æ•°ç»„æŒ‡é’ˆaï¼Œæ•°ç»„é•¿åº¦size
  */
 void RadixCountSort(int* a, int size);
 
 /**
  *  @name        : void ColorSort(int *a,int size)
- *  @description : ÑÕÉ«ÅÅĞò
- *  @param       : Êı×éÖ¸Õëa£¨Ö»º¬0£¬1£¬2ÔªËØ£©£¬Êı×é³¤¶Èsize
+ *  @description : é¢œè‰²æ’åº
+ *  @param       : æ•°ç»„æŒ‡é’ˆaï¼ˆåªå«0ï¼Œ1ï¼Œ2å…ƒç´ ï¼‰ï¼Œæ•°ç»„é•¿åº¦size
  */
 void ColorSort(int* a, int size);
 
 /**
- *  @name        : ×ÔÄâ
- *  @description : ÔÚÒ»¸öÎŞĞòĞòÁĞÖĞÕÒµ½µÚK´ó/Ğ¡µÄÊı
- *  @param       : Êı×éÖ¸Õëa£¬Êı×é³¤¶Èsize
+ *  @name        : è‡ªæ‹Ÿ
+ *  @description : åœ¨ä¸€ä¸ªæ— åºåºåˆ—ä¸­æ‰¾åˆ°ç¬¬Kå¤§/å°çš„æ•°
+ *  @param       : æ•°ç»„æŒ‡é’ˆaï¼Œæ•°ç»„é•¿åº¦size
  */
 
 #endif // QUEUE_H_INCLUDED
