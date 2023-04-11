@@ -1,5 +1,4 @@
 ﻿#pragma once
-
 #ifndef SORT_H_INCLUDED
 #define SORT_H_INCLUDED
 
@@ -57,7 +56,7 @@ void CountSort(int* a, int size, int max);
  *  @description : 基数计数排序
  *  @param       : 数组指针a，数组长度size
  */
-void RadixCountSort(int* a, int size);
+void RadixCountSort(int *a, int size);
 
 /**
  *  @name        : void ColorSort(int *a,int size)

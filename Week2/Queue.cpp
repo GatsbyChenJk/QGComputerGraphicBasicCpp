@@ -1,4 +1,4 @@
-#include "Queue.h"
+ï»¿#include "Queue.h"
 #include <iostream>
 
 QueueNode::QueueNode(){};
@@ -35,7 +35,7 @@ void ListQueue::Push(QueueNode* PushNode)
 {
 
 	QueueNode* tempNode = head;
-	//ÒÆ¶¯Ö¸Õëµ½¶ÓÎ²
+	//ç§»åŠ¨æŒ‡é’ˆåˆ°é˜Ÿå°¾
 	while (tempNode->next != nullptr)
 	{
 		tempNode = tempNode->next;
@@ -47,7 +47,7 @@ void ListQueue::Push(QueueNode* PushNode)
 
 	//tempNode->data = PushNode->data;
 
-	tail = PushNode;//¸üÐÂ¶ÓÎ²Ö¸Õë
+	tail = PushNode;//æ›´æ–°é˜Ÿå°¾æŒ‡é’ˆ
 
 	size++;
 }
@@ -62,7 +62,7 @@ void ListQueue::Pop()
 
 	QueueNode* PopNode = head->next;
 
-	head->next = PopNode->next;//ÒÆ¶¯¶ÓÍ·Ö¸Õëµ½ÐÂµÄ¶ÓÍ·
+	head->next = PopNode->next;//ç§»åŠ¨é˜Ÿå¤´æŒ‡é’ˆåˆ°æ–°çš„é˜Ÿå¤´
 
 	delete PopNode;
 
@@ -91,7 +91,7 @@ int ListQueue::GetLast()
 	using namespace std;
 
 	QueueNode* tempNode = head->next;
-	//»ñÈ¡¶ÓÎ²½áµãÖ¸Õë
+	//èŽ·å–é˜Ÿå°¾ç»“ç‚¹æŒ‡é’ˆ
 	while (tempNode->next != nullptr)
 	{
 		tempNode = tempNode->next;
